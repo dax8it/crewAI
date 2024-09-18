@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "conundrum"
+version = "0.1.0"
+description = "conundrum using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = "^0.60.00"  # Added this line
+filelock = "*"  # Add this line
+
+
+[tool.poetry.scripts]
+conundrum = "conundrum.main:run"
+run_crew = "conundrum.main:run"
+train = "conundrum.main:train"
+replay = "conundrum.main:replay"
+test = "conundrum.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
